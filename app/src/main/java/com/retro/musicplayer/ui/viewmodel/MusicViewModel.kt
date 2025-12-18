@@ -188,5 +188,6 @@ class MusicViewModel @Inject constructor(
 enum class LibraryTab {
     SONGS,
     ALBUMS,
-    ARTISTS
+    ARTISTS,
+    PLAYLISTS
 }

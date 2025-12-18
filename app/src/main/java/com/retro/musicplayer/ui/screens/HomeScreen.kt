@@ -26,6 +26,7 @@ import com.retro.musicplayer.ui.components.*
 import com.retro.musicplayer.ui.theme.*
 import com.retro.musicplayer.ui.viewmodel.LibraryTab
 import com.retro.musicplayer.ui.viewmodel.MusicViewModel
+import com.retro.musicplayer.ui.viewmodel.PlaylistViewModel
 
 /**
  * Home Screen - Màn hình chính hiển thị music library.
@@ -42,7 +43,9 @@ fun HomeScreen(
     onSongClick: (Song) -> Unit,
     onPlayerClick: () -> Unit,
     onExitClick: () -> Unit,
-    viewModel: MusicViewModel = hiltViewModel()
+    onPlaylistClick: (Long) -> Unit,
+    viewModel: MusicViewModel = hiltViewModel(),
+    playlistViewModel: PlaylistViewModel = hiltViewModel()
 ) {
     // State
     val songs by viewModel.songs.collectAsState()
@@ -52,6 +55,10 @@ fun HomeScreen(
     val scanState by viewModel.scanState.collectAsState()
     val playbackState by viewModel.playbackState.collectAsState()
     val songCount by viewModel.songCount.collectAsState()
+    
+    // Playlist state
+    val playlists by playlistViewModel.playlistsWithSongs.collectAsState()
+    var songToAddToPlaylist by remember { mutableStateOf<Song?>(null) }
     
     // Permission launcher
     val permissionLauncher = rememberLauncherForActivityResult(
@@ -165,7 +172,10 @@ fun HomeScreen(
                                         viewModel.playSong(song, displaySongs)
                                         onSongClick(song)
                                     },
-                                    isPlaying = playbackState.currentSong?.id == song.id
+                                    isPlaying = playbackState.currentSong?.id == song.id,
+                                    onMoreClick = {
+                                        songToAddToPlaylist = song
+                                    }
                                 )
                             }
                         }
@@ -173,6 +183,14 @@ fun HomeScreen(
                 }
             }
         }
+    }
+    
+    // Add to playlist dialog
+    songToAddToPlaylist?.let { song ->
+        AddToPlaylistDialog(
+            song = song,
+            onDismiss = { songToAddToPlaylist = null }
+        )
     }
 }
 
