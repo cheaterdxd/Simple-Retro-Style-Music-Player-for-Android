@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Retro/Vintage Color Palette -->
+    
+    <!-- Primary Colors -->
+    <color name="warm_cream">#F5E6D3</color>
+    <color name="warm_cream_dark">#E8D5C0</color>
+    <color name="vintage_brown">#8B7355</color>
+    <color name="vintage_brown_dark">#6B5344</color>
+    
+    <!-- Accent Colors -->
+    <color name="retro_orange">#E07B39</color>
+    <color name="retro_orange_dark">#C56A2E</color>
+    <color name="soft_amber">#FFBF00</color>
+    
+    <!-- Player Colors -->
+    <color name="cassette_black">#2D2D2D</color>
+    <color name="cassette_dark">#1A1A1A</color>
+    <color name="pixel_green">#00FF41</color>
+    <color name="pixel_green_dark">#00CC33</color>
+    
+    <!-- Surface Colors -->
+    <color name="surface_light">#FAF3EB</color>
+    <color name="surface_dark">#1E1E1E</color>
+    
+    <!-- Text Colors -->
+    <color name="text_primary_light">#2D2D2D</color>
+    <color name="text_secondary_light">#6B5344</color>
+    <color name="text_primary_dark">#F5E6D3</color>
+    <color name="text_secondary_dark">#B8A894</color>
+    
+    <!-- Status Colors -->
+    <color name="error_red">#D32F2F</color>
+    <color name="success_green">#388E3C</color>
+</resources>

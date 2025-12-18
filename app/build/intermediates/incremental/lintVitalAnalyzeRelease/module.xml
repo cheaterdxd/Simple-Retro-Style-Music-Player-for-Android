@@ -1,0 +1,18 @@
+<lint-module
+    format="1"
+    dir="D:\root_folder\rieng\code\music_player\app"
+    name=":app"
+    type="APP"
+    maven="RetroMusicPlayer:app:unspecified"
+    agpVersion="8.13.2"
+    buildFolder="build"
+    bootClassPath="E:\sdk\platforms\android-35\android.jar;E:\sdk\build-tools\35.0.0\core-lambda-stubs.jar"
+    javaSourceLevel="17"
+    compileTarget="android-35">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="release"/>
+</lint-module>

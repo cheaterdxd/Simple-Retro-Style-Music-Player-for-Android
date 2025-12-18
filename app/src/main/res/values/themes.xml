@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.RetroMusicPlayer" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/cassette_black</item>
+        <item name="android:navigationBarColor">@color/cassette_black</item>
+        <item name="android:windowBackground">@color/warm_cream</item>
+    </style>
+</resources>

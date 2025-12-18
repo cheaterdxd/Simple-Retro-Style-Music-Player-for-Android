@@ -1,0 +1,35 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <!-- Cassette tape icon -->
+    <group android:translateX="27" android:translateY="27">
+        <!-- Tape body -->
+        <path
+            android:fillColor="#E07B39"
+            android:pathData="M0,8 L54,8 L54,46 L0,46 Z" />
+        
+        <!-- Tape reels -->
+        <path
+            android:fillColor="#2D2D2D"
+            android:pathData="M13,27 m-8,0 a8,8 0,1 1,16 0 a8,8 0,1 1,-16 0" />
+        <path
+            android:fillColor="#2D2D2D"
+            android:pathData="M41,27 m-8,0 a8,8 0,1 1,16 0 a8,8 0,1 1,-16 0" />
+        
+        <!-- Reel centers -->
+        <path
+            android:fillColor="#F5E6D3"
+            android:pathData="M13,27 m-3,0 a3,3 0,1 1,6 0 a3,3 0,1 1,-6 0" />
+        <path
+            android:fillColor="#F5E6D3"
+            android:pathData="M41,27 m-3,0 a3,3 0,1 1,6 0 a3,3 0,1 1,-6 0" />
+        
+        <!-- Window -->
+        <path
+            android:fillColor="#1A1A1A"
+            android:pathData="M8,35 L46,35 L46,42 L8,42 Z" />
+    </group>
+</vector>
